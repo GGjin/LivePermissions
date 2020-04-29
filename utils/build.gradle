@@ -1,0 +1,10 @@
+dependencies {
+
+    implementation support.androidx
+
+    implementation gson
+
+    implementation lifecycle.extensions
+    kapt lifecycle.compiler
+    implementation lifecycle.viewmodel
+}
