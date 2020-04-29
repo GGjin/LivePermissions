@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.gg.utils.clickWithTrigger
 import com.gg.utils.toast
 import kotlinx.android.synthetic.main.fragment_amin.*
 
@@ -28,7 +29,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        button.setOnClickListener {
+        button.clickWithTrigger {
             applyPermissions(Manifest.permission.READ_EXTERNAL_STORAGE).observe(this, Observer {
                 Log.w("---", "-------2")
 

@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import com.elvishew.xlog.LogConfiguration
 import com.elvishew.xlog.LogLevel
 import com.elvishew.xlog.XLog
+import com.gg.utils.clickWithTrigger
 import com.gg.utils.toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,10 +26,10 @@ class MainActivity : AppCompatActivity() {
             .b().build()
 
         XLog.init(config)
-        button2.setOnClickListener {
+        button2.clickWithTrigger {
             applyPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE).observe(this, Observer {
-                XLog.w( "-------1")
-                XLog.w( it.toString())
+                XLog.w("-------1")
+                XLog.w(it.toString())
                 when (it) {
                     is PermissionResult.Grant -> {  //权限允许
                         toast("Grant")

@@ -58,13 +58,9 @@ subprojects {
             versionCode _android.versionCode as Integer
             versionName _android.versionName as String
 
-            multiDexEnabled true
-            vectorDrawables.useSupportLibrary = true
             testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         }
-
-        flavorDimensions "default"
 
         sourceSets {
             main.java.srcDirs += 'src/main/kotlin'
