@@ -1,7 +1,7 @@
 # LivePermissions
 使用kotlin拓展属性一行代码申请权限
-##使用方法
-###1.添加依赖
+## 使用方法
+### 1.添加依赖
 在 build.gradle中的repositories最后面添加
 ```
 maven { url 'https://jitpack.io' }
@@ -11,7 +11,7 @@ maven { url 'https://jitpack.io' }
 ```
  implementation 'com.github.GGJin:LivePermissions:1.0.1'
  ```
-###2.使用方法
+### 2.使用方法
 在Activity或者Fragment中的任何位置直接调用
 ```
  applyPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE).observe(this, Observer {
